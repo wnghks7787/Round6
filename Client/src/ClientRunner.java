@@ -42,6 +42,8 @@ public class ClientRunner
         DataOutputStream yPoint;
         DataOutputStream color;
 
+        int x;
+
         MainFrame mainFrame;
 
         ClientSender(Socket socket, String name, MainFrame mainFrame)
@@ -67,17 +69,21 @@ public class ClientRunner
                 if(out != null)
                     out.writeUTF(name);
 
-                while(out != null)
-                    out.writeUTF("[" + name + "]" + scanner.nextLine());
-
 //                while(out != null)
+//                    out.writeUTF("[" + name + "]" + scanner.nextLine());
 
+                while(out != null) {
+                    if(MainFrame.givePoint) {
+                        out.writeUTF(mainFrame.socketOutput);
+                        MainFrame.givePoint = false;
+                    }
+                }
 
             } catch (IOException e) {}
         }
     }
 
-    static class ClientReceiver extends Thread {
+    class ClientReceiver extends Thread {
         Socket socket;
         DataInputStream in;
 
@@ -96,8 +102,7 @@ public class ClientRunner
             while(in != null)
             {
                 try {
-                    System.out.println(in.readUTF());
-//                    System.out.println(in.readInt());
+                    mainFrame.paintXY(in.readUTF());
                 } catch (IOException e) {}
             }
         }

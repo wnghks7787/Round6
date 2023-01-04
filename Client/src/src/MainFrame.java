@@ -14,7 +14,8 @@ public class MainFrame extends JFrame implements MouseListener {
     JButton resetBtn;
     JButton[] themeBtn = new JButton[3];
 
-    public int socketX;
+    public String socketOutput;
+    public static boolean givePoint = false;
 
 
 //    Thread sender, receiver;
@@ -80,7 +81,8 @@ public class MainFrame extends JFrame implements MouseListener {
             else
                 return;
 
-            socketX = e.getX();
+            socketOutput = x + "," + y;
+            givePoint = true;
             repaint();
 
             blackCnt = 0;
@@ -132,6 +134,8 @@ public class MainFrame extends JFrame implements MouseListener {
                 menuPanel.blackTurn.setVisible(true);
                 menuPanel.whiteTurn.setVisible(false);
             }
+
+
 
         }
 
@@ -239,5 +243,80 @@ public class MainFrame extends JFrame implements MouseListener {
             else
                 JOptionPane.showMessageDialog(null, "White can't move!", "Pass", JOptionPane.WARNING_MESSAGE);
         }
+    }
+
+    public void paintXY(String str)
+    {
+
+        try {
+            String[] xy = str.split(",");
+
+            System.out.println("x : " + xy[0]);
+            System.out.println("y : " + xy[1]);
+
+            int numX = Integer.parseInt(xy[0]);
+            int numY = Integer.parseInt(xy[1]);
+
+            int color;
+
+            if (GamePanel.myTurn)
+                color = GamePanel.WHITE;
+            else
+                color = GamePanel.BLACK;
+
+            Check check = new Check(numX, numY, color);
+
+            if (GamePanel.stones[numY][numX] == 0 && check.checking())
+                GamePanel.stones[numY][numX] = color;
+            else
+                return;
+
+            repaint();
+
+            blackCnt = 0;
+            whiteCnt = 0;
+            for (int i = 0; i < 8; i++) {
+                for (int j = 0; j < 8; j++) {
+                    if (GamePanel.stones[i][j] == 1)
+                        blackCnt++;
+                    else if (GamePanel.stones[i][j] == -1)
+                        whiteCnt++;
+                }
+            }
+
+            menuPanel.blackInt.setText(String.valueOf(blackCnt));
+            menuPanel.whiteInt.setText(String.valueOf(whiteCnt));
+
+            if (MainFrame.whiteCnt > MainFrame.blackCnt)
+                resultFrame.textLabel.setText("White WIN!!");
+            else if (MainFrame.whiteCnt < MainFrame.blackCnt)
+                resultFrame.textLabel.setText("Black WIN!!");
+            else
+                resultFrame.textLabel.setText("DRAW!!");
+
+            GamePanel.myTurn = !GamePanel.myTurn;
+            if (GamePanel.myTurn)
+                color = GamePanel.WHITE;
+            else
+                color = GamePanel.BLACK;
+
+//            boolean empty = check.emptyCheck();
+            if (!check.emptyCheck(color)) {
+                System.out.println("PASS");
+                GamePanel.myTurn = !GamePanel.myTurn;
+
+                color *= -1;
+
+                passChecking(check, color);
+            }
+
+            if (GamePanel.myTurn) {
+                menuPanel.blackTurn.setVisible(false);
+                menuPanel.whiteTurn.setVisible(true);
+            } else {
+                menuPanel.blackTurn.setVisible(true);
+                menuPanel.whiteTurn.setVisible(false);
+            }
+        } catch (Exception e) {}
     }
 }

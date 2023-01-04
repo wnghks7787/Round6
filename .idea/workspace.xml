@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b90d70c-3c29-4191-a62c-311128ad24ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/assets/black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/assets/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/assets/white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/ClientRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/LoginFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/src/Check.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/src/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/src/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/src/MenuPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/src/ResultFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Round6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ServerRunner.java" afterDir="false" />
+    <list default="true" id="8b90d70c-3c29-4191-a62c-311128ad24ad" name="Changes" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/ClientRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/ClientRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,23 +27,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/imjuhwan/Documents/2022/2022-2/2022_Winter_Camp/Round6/Round6",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/imjuhwan/Documents/2022/2022-2/2022_Winter_Camp/Round6/Round6&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Client" />
@@ -95,8 +81,18 @@
       <option name="presentableId" value="Default" />
       <updated>1672794150883</updated>
       <workItem from="1672794152424" duration="228000" />
-      <workItem from="1672794440426" duration="5816000" />
+      <workItem from="1672794440426" duration="8820000" />
+      <workItem from="1672810598692" duration="80000" />
+      <workItem from="1672811484956" duration="8632000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1672806353658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672806353658</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,5 +108,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>

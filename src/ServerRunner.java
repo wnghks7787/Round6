@@ -39,18 +39,18 @@ public class ServerRunner {
         }
     }
 
-//    void sendPoint(int x)
-//    {
-//        Iterator it = clients.keySet().iterator();
-//
-//        while(it.hasNext())
-//        {
-//            try {
-//                DataOutputStream output = (DataOutputStream) clients.get(it.next());
-//                output.writeInt(x);
-//            } catch(IOException e) {}
-//        }
-//    }
+    void sendPoint(int x)
+    {
+        Iterator it = clients.keySet().iterator();
+
+        while(it.hasNext())
+        {
+            try {
+                DataOutputStream output = (DataOutputStream) clients.get(it.next());
+                output.writeInt(x);
+            } catch(IOException e) {}
+        }
+    }
 
     void sendToAll(String msg)
     {
@@ -96,6 +96,12 @@ public class ServerRunner {
 
                 while(in != null)
                     sendToAll(in.readUTF());
+
+//                while(in != null)
+//                    sendPoint(in.readInt());
+
+//                System.out.println(in.readInt());
+
             } catch (IOException e) {
 
             } finally {
