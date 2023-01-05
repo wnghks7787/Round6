@@ -18,14 +18,12 @@ public class ClientRunner
     void mainRunner()
     {
         try {
-            mainFrame = new MainFrame(loginFrame.getInputName(), LoginFrame.myColor);
+            mainFrame = new MainFrame(loginFrame.getInputName(), LoginFrame.myColor, loginFrame.getInputRoom());
             String serverIp = loginFrame.getInputIP();
             Socket socket = new Socket(serverIp, 7777);
             System.out.println("서버에 연결되었습니다.");
             Thread sender = new Thread(new ClientSender(socket, loginFrame.getInputName(), mainFrame));
             Thread receiver = new Thread(new ClientReceiver(socket));
-
-//            new MainFrame(loginFrame.getInputName(), sender, receiver);
 
             sender.start();
             receiver.start();

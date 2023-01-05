@@ -18,11 +18,13 @@ public class MainFrame extends JFrame implements MouseListener {
     public static boolean givePoint = false;
 
     int myColor;
+    String roomNo;
     public static int whiteCnt = 0;
     public static int blackCnt = 0;
-    public MainFrame(String name, int myColor)
+    public MainFrame(String name, int myColor, String roomNo)
     {
         this.myColor = myColor;
+        this.roomNo = roomNo;
 
         getContentPane().setBackground(new Color(103, 92, 92));
         setSize(900, 700);
@@ -83,7 +85,7 @@ public class MainFrame extends JFrame implements MouseListener {
             else
                 return;
 
-            socketOutput = x + "," + y;
+            socketOutput = x + "," + y + "," + roomNo;
             givePoint = true;
             repaint();
 
@@ -253,11 +255,15 @@ public class MainFrame extends JFrame implements MouseListener {
         try {
             String[] xy = str.split(",");
 
-            System.out.println("x : " + xy[0]);
-            System.out.println("y : " + xy[1]);
+//            System.out.println("x : " + xy[0]);
+//            System.out.println("y : " + xy[1]);
 
             int numX = Integer.parseInt(xy[0]);
             int numY = Integer.parseInt(xy[1]);
+            int roomNum = Integer.parseInt(xy[2]);
+
+            if(Integer.parseInt(roomNo) != roomNum)
+                return;
 
             int color;
 

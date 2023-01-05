@@ -53,6 +53,7 @@ public class LoginFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 inputName = nameField.getText();
                 inputIP = ipField.getText();
+                inputRoom = roomField.getText();
 
                 setVisible(false);
                 ClientRunner clientRunner = new ClientRunner();
