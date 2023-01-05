@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b90d70c-3c29-4191-a62c-311128ad24ad" name="Changes" comment="Initial commit">
+    <list default="true" id="8b90d70c-3c29-4191-a62c-311128ad24ad" name="Changes" comment="finish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/ClientRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/ClientRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/src/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/src/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerRunner.java" afterDir="false" />
     </list>
@@ -83,7 +85,10 @@
       <workItem from="1672794152424" duration="228000" />
       <workItem from="1672794440426" duration="8820000" />
       <workItem from="1672810598692" duration="80000" />
-      <workItem from="1672811484956" duration="8632000" />
+      <workItem from="1672811484956" duration="14830000" />
+      <workItem from="1672836441517" duration="4935000" />
+      <workItem from="1672850458593" duration="1470000" />
+      <workItem from="1672885222652" duration="3008000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1672806353658</created>
@@ -92,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672806353658</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finish">
+      <created>1672820630589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672820630589</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
 </project>

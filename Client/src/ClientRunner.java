@@ -1,3 +1,4 @@
+import src.GamePanel;
 import src.MainFrame;
 
 import java.net.*;
@@ -17,7 +18,7 @@ public class ClientRunner
     void mainRunner()
     {
         try {
-            mainFrame = new MainFrame(loginFrame.getInputName());
+            mainFrame = new MainFrame(loginFrame.getInputName(), LoginFrame.myColor);
             String serverIp = loginFrame.getInputIP();
             Socket socket = new Socket(serverIp, 7777);
             System.out.println("서버에 연결되었습니다.");
@@ -38,12 +39,6 @@ public class ClientRunner
         DataOutputStream out;
         String name;
 
-        DataOutputStream xPoint;
-        DataOutputStream yPoint;
-        DataOutputStream color;
-
-        int x;
-
         MainFrame mainFrame;
 
         ClientSender(Socket socket, String name, MainFrame mainFrame)
@@ -53,9 +48,6 @@ public class ClientRunner
 
             try {
                 out = new DataOutputStream(socket.getOutputStream());
-//                output.write(mainFrame.socketX);
-//                out.writeInt(mainFrame.socketX);
-//                xPoint = new DataOutputStream(mainFrame.socketX);
                 this.name = name;
             } catch (Exception e) {}
         }
@@ -63,19 +55,17 @@ public class ClientRunner
         @ Override
         public void run()
         {
-            Scanner scanner = new Scanner(System.in);
-
             try {
                 if(out != null)
                     out.writeUTF(name);
-
-//                while(out != null)
-//                    out.writeUTF("[" + name + "]" + scanner.nextLine());
 
                 while(out != null) {
                     if(MainFrame.givePoint) {
                         out.writeUTF(mainFrame.socketOutput);
                         MainFrame.givePoint = false;
+
+//                        System.out.println("test : " + MainFrame.givePoint);
+                        GamePanel.test = false;
                     }
                 }
 
@@ -102,7 +92,9 @@ public class ClientRunner
             while(in != null)
             {
                 try {
-                    mainFrame.paintXY(in.readUTF());
+                    String str = in.readUTF();
+                    System.out.println(str);
+                    mainFrame.paintXY(str);
                 } catch (IOException e) {}
             }
         }

@@ -39,19 +39,6 @@ public class ServerRunner {
         }
     }
 
-    void sendPoint(int x)
-    {
-        Iterator it = clients.keySet().iterator();
-
-        while(it.hasNext())
-        {
-            try {
-                DataOutputStream output = (DataOutputStream) clients.get(it.next());
-                output.writeInt(x);
-            } catch(IOException e) {}
-        }
-    }
-
     void sendToAll(String msg)
     {
         Iterator it = clients.keySet().iterator();

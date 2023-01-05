@@ -27,6 +27,7 @@ public class GamePanel extends JPanel {
     // Press 할 때 사용할 위치좌표
     Point clickPoint = new Point();
 
+    public static boolean test = false;
     public GamePanel()
     {
         // 이미지 불러오기
@@ -80,6 +81,7 @@ public class GamePanel extends JPanel {
             }
         }
 
+        test = true;
     }
 
     void getImage()

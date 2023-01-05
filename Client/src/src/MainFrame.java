@@ -17,15 +17,12 @@ public class MainFrame extends JFrame implements MouseListener {
     public String socketOutput;
     public static boolean givePoint = false;
 
-
-//    Thread sender, receiver;
-
+    int myColor;
     public static int whiteCnt = 0;
     public static int blackCnt = 0;
-    public MainFrame(String name)
+    public MainFrame(String name, int myColor)
     {
-//        this.sender = sender;
-//        this.receiver = receiver;
+        this.myColor = myColor;
 
         getContentPane().setBackground(new Color(103, 92, 92));
         setSize(900, 700);
@@ -73,6 +70,11 @@ public class MainFrame extends JFrame implements MouseListener {
                 color = GamePanel.WHITE;
             else
                 color = GamePanel.BLACK;
+
+            if(myColor != color) {
+                System.out.println("현재 색깔 : " + color + ", 당신의 색깔 : " + myColor);
+                return;
+            }
 
             Check check = new Check(x, y, color);
 
